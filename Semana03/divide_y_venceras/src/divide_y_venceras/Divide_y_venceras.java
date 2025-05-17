@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package divide_y_venceras;
 import java.util.Stack;
-/**
- *
- * @author JimXL
- */
+import java.util.Scanner;
+
 public class Divide_y_venceras {
 
-      public static int ackermann(int m, int n) {
+    public static int ackermann(int m, int n) {
         Stack<Integer> stack = new Stack<>();
         stack.push(m);
         
@@ -30,14 +24,32 @@ public class Divide_y_venceras {
                 n -= 1;
             }
         }
-        
         return n;
     }
     
     public static void main(String[] args) {
-        // Ejemplos de uso
-        System.out.println(ackermann(0, 5));  // Debe devolver 6
-        System.out.println(ackermann(1, 0));  // Debe devolver 2
-        System.out.println(ackermann(2, 2));  // Debe devolver 7
+        Scanner scanner = new Scanner(System.in);
+        
+        // Pedir al usuario ingresar m y n
+        System.out.print("Ingrese el valor de m: ");
+        int m = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor de n: ");
+        int n = scanner.nextInt();
+        
+        // Medir el tiempo de ejecución
+        long startTime = System.nanoTime();
+        int resultado = ackermann(m, n);
+        long endTime = System.nanoTime();
+        
+        // Calcular tiempo en nanosegundos
+        long duration = endTime - startTime;
+        
+        // Mostrar resultados
+        System.out.println("\nResultados");
+        System.out.println("A(" + m + ", " + n + ") = " + resultado);
+        System.out.println("Tiempo de ejecucion: " + duration + " ns");
+        
+        scanner.close();
     }
 }
