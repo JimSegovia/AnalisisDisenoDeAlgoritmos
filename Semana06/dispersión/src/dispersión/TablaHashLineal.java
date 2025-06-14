@@ -30,7 +30,7 @@ public class TablaHashLineal {
         while (tabla[indice] != null) {
             colisiones++;
             indice = (indice + 1) % capacidad;
-            if (indice == indiceInicial) break; // Evitar bucle infinito
+            if (indice == indiceInicial) break;
         }
 
         tabla[indice] = cliente;

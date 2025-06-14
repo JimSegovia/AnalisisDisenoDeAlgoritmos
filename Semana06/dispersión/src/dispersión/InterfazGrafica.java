@@ -14,7 +14,7 @@ public class InterfazGrafica extends JFrame {
         tablaBST = new TablaHashBST(100);
         
         setTitle("Comparación Tablas Hash");
-        setSize(900, 700);  // Aumentamos el tamaño de la ventana
+        setSize(900, 700);  
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         // Panel principal con BorderLayout
@@ -73,16 +73,16 @@ public class InterfazGrafica extends JFrame {
             long tiempoBST = System.nanoTime() - inicio;
             
             // Formatear salida multilínea
-            String resultado = "✅ CLIENTE INSERTADO:\n" +
+            String resultado = "CLIENTE INSERTADO:\n" +
                 "----------------------------------------------\n" +
                 cliente.toString() + "\n\n" +
                 
-                "⏱️  TIEMPOS DE INSERCIÓN:\n" +
+                "TIEMPOS DE INSERCIÓN:\n" +
                 "----------------------------------------------\n" +
                 "• Lineal: " + tiempoLineal + " ns\n" +
                 "• BST:    " + tiempoBST + " ns\n\n" +
                 
-                "🚨 COLISIONES TOTALES:\n" +
+                "COLISIONES TOTALES:\n" +
                 "----------------------------------------------\n" +
                 "• Lineal: " + tablaLineal.getColisiones() + "\n" +
                 "• BST:    " + tablaBST.getColisiones() + "\n\n" +
@@ -107,19 +107,19 @@ public class InterfazGrafica extends JFrame {
             String resultado = "🔍 BUSQUEDA: '" + clave + "'\n" +
                 "==============================================\n\n" +
                 
-                "📊 MÉTODO LINEAL:\n" +
+                "MÉTODO LINEAL:\n" +
                 "----------------------------------------------\n" +
                 "Resultado: " + ((encontradoLineal != null) ? encontradoLineal : "No encontrado") + "\n" +
                 "Tiempo:    " + tiempoLineal + " ns\n" +
                 "Colisiones: " + tablaLineal.getColisiones() + "\n\n" +
                 
-                "🌳 MÉTODO BST:\n" +
+                "MÉTODO BST:\n" +
                 "----------------------------------------------\n" +
                 "Resultado: " + ((encontradoBST != null) ? encontradoBST : "No encontrado") + "\n" +
                 "Tiempo:    " + tiempoBST + " ns\n" +
                 "Colisiones: " + tablaBST.getColisiones() + "\n\n" +
                 
-                "📈 ANÁLISIS COMPARATIVO:\n" +
+                "ANÁLISIS COMPARATIVO:\n" +
                 "==============================================\n" +
                 ComparadorMetodos.compararRendimiento();
             

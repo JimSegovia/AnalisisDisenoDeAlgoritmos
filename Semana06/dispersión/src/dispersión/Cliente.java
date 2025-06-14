@@ -22,7 +22,6 @@ public class Cliente {
         this.codigoPostal = codigoPostal;
     }
 
-    // Getters
     public String getClave() {
         return nombres + " " + apellidos;  // Clave para el hash
     }
@@ -32,8 +31,4 @@ public class Cliente {
         return nombres + " " + apellidos + " (" + codigo + ")";
     }
 
-    // Getters para todos los campos (omitidos por brevedad)
-    // public String getCodigo() { ... }
-    // public String getNombres() { ... }
-    // ...
 }
